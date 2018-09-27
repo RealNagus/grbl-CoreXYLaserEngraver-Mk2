@@ -490,4 +490,47 @@
   #define DEFAULT_HOMING_PULLOFF 1.0 // mm
 #endif
 
+
+#ifdef DEFAULTS_COREXY_LASERENGRAVER_MK2
+  // proper settings for the CoreXY Laser Engraver Mk2
+  // NOTE: check the travel limits for your build and make sure the 
+  //       endstops trigger in time to prevent crashes
+  #define DEFAULT_X_STEPS_PER_MM 160.0	// 32x uStepping
+  #define DEFAULT_Y_STEPS_PER_MM 160.0	// 32x uStepping
+  #define DEFAULT_Z_STEPS_PER_MM 400.0	// 4x uStepping with a 2 mm trapezoidal screw
+  #define DEFAULT_X_MAX_RATE 5000.0 // mm/min
+  #define DEFAULT_Y_MAX_RATE 5000.0 // mm/min
+  #define DEFAULT_Z_MAX_RATE 400.0 // mm/min
+  #define DEFAULT_X_ACCELERATION (150.0*60*60) // 150*60*60 mm/min^2 = 10 mm/sec^2
+  #define DEFAULT_Y_ACCELERATION (150.0*60*60) // 150*60*60 mm/min^2 = 10 mm/sec^2
+  #define DEFAULT_Z_ACCELERATION (20.0*60*60) // 20*60*60 mm/min^2 = 10 mm/sec^2
+  #define DEFAULT_X_MAX_TRAVEL 210.0 // mm NOTE: Must be a positive value.
+  #define DEFAULT_Y_MAX_TRAVEL 190.0 // mm NOTE: Must be a positive value.
+  #define DEFAULT_Z_MAX_TRAVEL 50.0 // mm NOTE: Must be a positive value.
+  #define DEFAULT_SPINDLE_RPM_MAX 1024.0 // rpm
+  #define DEFAULT_SPINDLE_RPM_MIN 0.0 // rpm
+  #define DEFAULT_STEP_PULSE_MICROSECONDS 10
+  #define DEFAULT_STEPPING_INVERT_MASK 0
+  #define DEFAULT_DIRECTION_INVERT_MASK 0
+  #define DEFAULT_STEPPER_IDLE_LOCK_TIME 25 // msec (0-254, 255 keeps steppers enabled)
+  #define DEFAULT_STATUS_REPORT_MASK 1 // MPos enabled
+  #define DEFAULT_JUNCTION_DEVIATION 0.01 // mm
+  #define DEFAULT_ARC_TOLERANCE 0.002 // mm
+  #define DEFAULT_REPORT_INCHES 0 // false
+  #define DEFAULT_INVERT_ST_ENABLE 0 // false
+  #define DEFAULT_INVERT_LIMIT_PINS 0 // false
+  #define DEFAULT_SOFT_LIMIT_ENABLE 1 // true
+  #define DEFAULT_HARD_LIMIT_ENABLE 1  // true
+  #define DEFAULT_INVERT_PROBE_PIN 0 // false
+  #define DEFAULT_LASER_MODE 1 // true
+  #define DEFAULT_HOMING_ENABLE 1  // true
+  #define DEFAULT_HOMING_DIR_MASK 7 // move to min-endstops
+  #define DEFAULT_HOMING_FEED_RATE 200.0 // mm/min
+  #define DEFAULT_HOMING_SEEK_RATE 1000.0 // mm/min
+  #define DEFAULT_HOMING_DEBOUNCE_DELAY 250 // msec (0-65k)
+  #define DEFAULT_HOMING_PULLOFF 3.0 // mm
+#endif
+
+
+
 #endif
